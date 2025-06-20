@@ -12,4 +12,11 @@
 	<artifactId>n2-core</artifactId>
     <name>n2-core</name>
     <description>Core module for N2 artifact</description>
+    <dependencies>
+        <dependency>
+            <groupId>com.networknt</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>1.5.7</version>
+        </dependency>
+    </dependencies>
 </project>
