@@ -1,13 +1,13 @@
-package com.n2.n2_core;
+package com.n2.sdk;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class N2CoreApplication {
+public class N2SdkApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(N2CoreApplication.class, args);
+		SpringApplication.run(N2SdkApplication.class, args);
 	}
 
 }

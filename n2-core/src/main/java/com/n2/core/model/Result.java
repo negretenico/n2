@@ -1,4 +1,4 @@
-package com.n2.n2_core.model;
+package com.n2.core.model;
 
 import java.util.Objects;
 
