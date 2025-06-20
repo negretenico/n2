@@ -1,7 +1,7 @@
-package com.n2.n2_core.store;
+package com.n2.core.store;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.n2.n2_core.model.Result;
+import com.n2.core.model.Result;
 
 import java.util.List;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.n2.n2_core.store;
+package com.n2.core.store;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
