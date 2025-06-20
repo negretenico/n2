@@ -1,2 +1,4 @@
 n2:
   seed: data/n2-seed.json
+  schema: data/schema.json
+  type: IN_MEMORY
