@@ -9,7 +9,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     <packaging>jar</packaging>
-	<artifactId>n2-core</artifactId>
+    <artifactId>n2-core</artifactId>
     <name>n2-core</name>
     <description>Core module for N2 artifact</description>
     <dependencies>
@@ -17,6 +17,11 @@
             <groupId>com.networknt</groupId>
             <artifactId>json-schema-validator</artifactId>
             <version>1.5.7</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jayway.jsonpath</groupId>
+            <artifactId>json-path</artifactId>
+            <version>2.9.0</version>
         </dependency>
     </dependencies>
 </project>
