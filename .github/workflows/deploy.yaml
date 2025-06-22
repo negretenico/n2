@@ -20,4 +20,4 @@ jobs:
       - name: Build and Deploy with Maven
         run: mvn deploy -DskipTests
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.N2_PUBLISH_TOKEN }}
