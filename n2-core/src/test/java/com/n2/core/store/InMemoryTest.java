@@ -5,46 +5,31 @@ import com.n2.core.model.Result;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.HashMap;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 @ExtendWith(MockitoExtension.class)
 class InMemoryTest {
     InMemory inMemory;
-    @Mock
-    ObjectMapper objectMapper;
+
     @BeforeEach
-    void setUp(){
-        inMemory= new InMemory(new HashMap<>(),objectMapper);
+    void setUp() {
+        inMemory = new InMemory(new HashMap<>(), new ObjectMapper());
     }
+
     @Test
     void put() {
-        Result res  =inMemory.put("Nico","key");
+        Result res = inMemory.put("Nico", "key");
         assertTrue(res.isSuccess());
-    }
-
-    @Test
-    void get() {
-        inMemory.put("Nico","key");
-        Result res = inMemory.get("Nico");
-        assertTrue(res.isSuccess());
-        res = inMemory.get("bye");
-        assertTrue(res.isFailure());
-    }
-
-    @Test
-    void getAs() {
-        inMemory.put("Nico","key");
-        Result<String> res = inMemory.getAs("Nico",String.class);
-        assertEquals(String.class, res.data().getClass());
     }
 
     @Test
     void delete() {
-        inMemory.put("Nico","key");
+        inMemory.put("Nico", "key");
         Result res = inMemory.delete("Nico");
         assertEquals(1, res.data());
         res = inMemory.delete("bye");
@@ -53,6 +38,9 @@ class InMemoryTest {
 
     @Test
     void query() {
-        assertTrue(inMemory.query("someQuery").isFailure());
+        inMemory.put("Nico", "key");
+        Result<String> res = inMemory.query("$.Nico", String.class);
+        assertTrue(res.isSuccess());
+        assertEquals("key", res.data());
     }
 }

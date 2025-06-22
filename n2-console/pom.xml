@@ -8,20 +8,20 @@
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
-    <packaging>jar</packaging>
-    <artifactId>n2-core</artifactId>
-    <name>n2-core</name>
-    <description>Core module for N2 artifact</description>
+    <artifactId>n2-console</artifactId>
+    <name>n2-console</name>
+    <description>Demo project for Spring Boot</description>
     <dependencies>
+        <!-- n2-console/pom.xml -->
         <dependency>
-            <groupId>com.networknt</groupId>
-            <artifactId>json-schema-validator</artifactId>
-            <version>1.5.7</version>
+            <groupId>io.undertow</groupId>
+            <artifactId>undertow-core</artifactId>
+            <version>2.3.17.Final</version>
         </dependency>
         <dependency>
-            <groupId>com.jayway.jsonpath</groupId>
-            <artifactId>json-path</artifactId>
-            <version>2.9.0</version>
+            <groupId>com.n2</groupId>
+            <artifactId>n2-core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 </project>
