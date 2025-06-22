@@ -8,6 +8,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read  # Often needed for actions like checkout
+      packages: write # This is crucial for deploying packages
     steps:
       - uses: actions/checkout@v4
 
